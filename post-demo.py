@@ -29,5 +29,5 @@ def post(p,billModel='通用OCR'):
 
     
 if __name__=='__main__':
-    p = 'test/card.png'
+    p = 'test/idcard-demo.jpeg'
     post(p,'身份证')

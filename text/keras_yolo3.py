@@ -362,8 +362,8 @@ def box_layer(inputs,anchors,num_classes):
         
         scores.append(box_score)
         
-    boxes  = concatenate(boxes, axis=0)
-    scores = concatenate(scores, axis=0)
+    boxes  = K.concatenate(boxes[:], axis=0)
+    scores = K.concatenate(scores[:], axis=0)
     
     boxes *= K.concatenate([image_shape[::-1], image_shape[::-1]])
     
